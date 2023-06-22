@@ -10,17 +10,25 @@
             color: rgb(24, 83, 201);
             font: normal 11pt arial;
         }
-        
+
     </style>
 </head>
 <body>
     <h1>essa é a primeira aula</h1>
     <p>aqui vai o resultado</p>
-    <p>aprendendo a usar <strong>DOM</strong> em java script</p>
-    <div>clique em min</div>
+    <p >aprendendo a usar <strong>DOM</strong> em java script</p>
+    <div id="msg">clique em min</div>
 
     <script>
-
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var d = window.document.getElementById('msg')
+        /*
+        d.style.backgroundColor = 'black'
+        d.innerText = 'estou esperando ...'
+        */
+        var d = window.document.querySelector(`div#msg`)
+        d.style.backgroundColor = 'black'
 
     </script>
 </body>
