@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratica 1</title>
+    <style>
+        body {
+            font: Normal 10pt Arial
+        }
+    </style>
+</head>
+<body>
+    <h1>Me responda qual sua nacionalidade</h1>
+    <input type="txtnc" id="txtnacio">
+    <input type="button" value="ok" onclick="nacionalidade()">
+    <div id="txt-res">-</div>
+    <script>
+        var pais = window.document.getElementById('txtnacio')
+        var res = window.document.getElementById('txt-res')
+        function nacionalidade() {
+            if ((pais.value) != 'Brasil') {
+                res.innerHTML = 'Você é estrageiro'
+            } else {
+                res.innerHTML = 'Você é Brasileiro'
+            }
+        } 
+    </script>
+    
+</body>
+</html>

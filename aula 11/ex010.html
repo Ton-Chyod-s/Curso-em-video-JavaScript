@@ -23,12 +23,12 @@
             vel_numero = Number(velocidade.value)
             var calculo = vel_numero - 50
             
-            km_res.innerHTML = `Sua velocidade atual <strong>${vel_numero} KM/h</strong>`
+            km_res.innerHTML = `<p>Sua velocidade atual <strong>${vel_numero} KM/h</strong></p>`
             if (vel_numero > 50) {
-                var s = `sua velocidade passou ${calculo}: Multa grave!!`
+                var s = `<p>sua velocidade passou ${calculo}: Multa grave!!</p>`
                 resultado.innerHTML = s
             } else {
-                var s = `Esta dentro da velocidade`
+                var s = `<p>Esta dentro da velocidade</p>`
                 resultado.innerHTML = s
             }
         }
