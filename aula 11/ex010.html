@@ -15,19 +15,18 @@
     <p id="resultado">Resultado</p>
     <div id="res">0</div>
     <script>
-        var velocidade = window.document.getElementById('txtvel')
-        var resultado = window.document.getElementById('res')
-        vel_numero = Number(velocidade.value)
-        function calcular(){
-            
-        if (velocidade > 50) {
-            calculo  = 50 - vel_numero
-            var s = `sua velocidade passou ${calculo}`
-            resultado.innerHTML = s
-        } else {
-            var s = `Esta dentro da velocidade`
-            resultado.innerHTML = s
-        }
+        function calcular() {
+            var velocidade = window.document.getElementById('txtvel')
+            var resultado = window.document.getElementById('res')
+            vel_numero = Number(velocidade.value)
+            var calculo = vel_numero - 50
+            if (vel_numero > 50) {
+                var s = `sua velocidade passou ${calculo} `
+                resultado.innerHTML = s
+            } else {
+                var s = `Esta dentro da velocidade`
+                resultado.innerHTML = s
+            }
 
         }
         
