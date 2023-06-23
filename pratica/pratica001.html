@@ -8,15 +8,21 @@
         body {
             font: Normal 13pt "Times New Roman";
         }
-        p {
+        p#p1 {
             font: Normal 10pt Arial;
+            background-color: red;
+            color: black;
+            width: 150px;
+            height: 15px;
+            text-align: center;
+
         }
 
     </style>
 </head>
 <body>
     <h1>Essa vai ser a primeira pratica</h1>
-    <p>vamos fazer um calculo</p>
+    <p id="p1">vamos fazer um calculo</p>
     <input type="num1" name="num1" id="num1"> +
     <input type="num2" name="num2" id="num2">
     <input type="button" value="somar" onclick="somar()">
