@@ -8,7 +8,7 @@
         body {
             font: Normal 13pt "Times New Roman";
         }
-        p#p1 {
+        div#res {
             font: Normal 10pt Arial;
             background-color: red;
             color: black;
@@ -28,6 +28,11 @@
     <input type="button" value="somar" onclick="somar()">
     <div id="res">Resultado</div>
     <script>
+        var a = window.document.getElementById("res")
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout',sair)
+
         function somar(){
             var numero1 = window.document.getElementById("num1")
             var numero2 = window.document.getElementById("num2")
@@ -36,6 +41,20 @@
             var s = num1 + num2
             var res = window.document.getElementById("res")
             res.innerHTML = s
+        }
+        function clicar(){
+            a.innerText = 'Você clicou!'
+            a.style.background = 'purple'
+            a.style.color = 'white'
+        }
+        function entrar(){
+            a.innerText = 'Você passou o mouse!'
+            a.style.background = 'green'
+        }
+        function sair(){
+            a.innerText = 'Você saiu!'
+            a.style.background = 'black'
+            a.style.color = 'white'
         }
     </script>
 </body>
