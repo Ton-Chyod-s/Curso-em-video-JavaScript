@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pratica de condicionais composta</title>
+    <style>
+        body {
+            font: Normal 11pt Arial
+        }
+    </style>
+</head>
+<body>
+    <h1>Primiera pratica de condicional composta</h1>
+    <p>Qual é sua idade?</p>
+    <input type="number" name="num1" id="num1">
+    <input type="button" value="ok" onclick="ok()">
+    <p id="idade">Você tem ... </p>
+    <div id="res">.</div>
+
+    <script>
+        function ok() {
+            var idade = Number(window.document.getElementById('num1').value)
+            var resposta = window.document.getElementById('res')
+            var suaidade = window.document.getElementById('idade')
+            suaidade.innerHTML = `Você tem <strong>${idade} anos</strong>`
+            if (idade < 16) {
+                resposta.innerHTML = 'Não vota'
+            } else if (idade < 18 || idade > 65){
+                resposta.innerHTML = 'Voto opcional'
+            } else {
+                resposta.innerHTML = 'Voto obrigatório'
+            }
+        }
+    </script>
+</body>
+</html>
