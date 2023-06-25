@@ -16,19 +16,45 @@
 <body>
     <h1>Estudo sobre variavel composta</h1>
     <input type="number" name="numero" id="numero">
+    <input type="number" name="vetor" id="vetor">
     <input type="button" value="ok" onclick="ok()">
     <div id="res">resposta</div>
     <script>
+        
+        function numeroParaVetor(numero) {
+            var numeroString = numero.toString(); // Converte o número para uma string
+            var vetor = numeroString.split('') // Divide a string em caracteres individuais
+                          .map(function(caractere) {
+                            return parseInt(caractere); // Converte cada caractere em um número inteiro
+                          });
+            return vetor;
+        }
+
         function ok() {
             var numero = window.document.getElementById('numero').value
+            var numero_vetor = window.document.getElementById('vetor').value
+            var num_vetor = Number(numero_vetor)
+            var vetor = numeroParaVetor(numero)
             var res = window.document.getElementById('res')
-            num = Number(numero)
+            res.innerHTML = `Seu número é [${vetor}]`
+            vetor.sort()
+            if (vetor.length > 0) {
+                vetor.push(num_vetor);
+                var novaLinha = document.createElement('p');
+                novaLinha.innerHTML = `Seu Novo vetor é [${vetor.join(', ')}]`;
+                res.appendChild(novaLinha);
+            }
 
-            res.innerHTML = `Seu numero é ${num}`
-            
+            var posicao = vetor.indexOf(4);
+            if (posicao !== -1) {
+                var novaLinha2 = document.createElement('p');
+                novaLinha2.innerHTML = `O elemento 4 está na posição ${posicao}.`;
+                res.appendChild(novaLinha2);
+            }
+
+   
         }
 
     </script>
-    
 </body>
 </html>
