@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variaveis composta</title>
+    <style>
+        body {
+            font: Normal 12pt Arial;
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Estudo sobre variavel composta</h1>
+    <input type="number" name="numero" id="numero">
+    <input type="button" value="ok" onclick="ok()">
+    <div id="res">resposta</div>
+    <script>
+        function ok() {
+            var numero = window.document.getElementById('numero').value
+            var res = window.document.getElementById('res')
+            num = Number(numero)
+
+            res.innerHTML = `Seu numero é ${num}`
+            
+        }
+
+    </script>
+    
+</body>
+</html>
