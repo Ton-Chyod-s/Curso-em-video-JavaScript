@@ -30,14 +30,22 @@
                 resposta.appendChild(novaLinha);
                 c++
             }
-            */
-
+            
+        
            do{
             var novaLinha = document.createElement('p');
             novaLinha.innerHTML = `Tudo bem ${c}`
             resposta.appendChild(novaLinha);
             c++
            } while (c <= numero )
+
+           */
+
+           for (var c = 1 ; c <= numero  ; c++ ) {
+            var novaLinha = document.createElement('p');
+            novaLinha.innerHTML = `Tudo bem ${c}`
+            resposta.appendChild(novaLinha);
+           }
            
         }
         
