@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeira pratica</title>
+    <style>
+        body {
+            font: Normal 13pt "Times New Roman";
+        }
+        div#res {
+            font: Normal 10pt Arial;
+            background-color: red;
+            color: black;
+            width: 150px;
+            height: 15px;
+            text-align: center;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Essa vai ser a primeira pratica</h1>
+    <p id="p1">vamos fazer um calculo</p>
+    <input type="num1" name="num1" id="num1"> +
+    <input type="num2" name="num2" id="num2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">Resultado</div>
+    <script>
+        var a = window.document.getElementById("res")
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout',sair)
+
+        function somar(){
+            var numero1 = window.document.getElementById("num1")
+            var numero2 = window.document.getElementById("num2")
+            num1 = Number(numero1.value)
+            num2 = Number(numero2.value)
+            var s = num1 + num2
+            var res = window.document.getElementById("res")
+            res.innerHTML = s
+        }
+        function clicar(){
+            a.innerText = 'Você clicou!'
+            a.style.background = 'purple'
+            a.style.color = 'white'
+        }
+        function entrar(){
+            a.innerText = 'Você passou o mouse!'
+            a.style.background = 'green'
+        }
+        function sair(){
+            a.innerText = 'Você saiu!'
+            a.style.background = 'black'
+            a.style.color = 'white'
+        }
+    </script>
+</body>
+</html>
