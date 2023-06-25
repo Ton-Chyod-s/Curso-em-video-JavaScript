@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetição</title>
+    <style>
+        body {
+            font: Normal 12pt Arial
+        }
+    </style>
+</head>
+<body>
+    <h1>Este é o teste para laço de repetição em JavaScript</h1>
+    <input type="number" name="txt" id="txt"> :
+    <input type="button" value="ok" onclick="ok()">
+    <p id="res">resposta</p>
+    <script>
+        
+        function ok() {
+            var numero = window.document.getElementById('txt').value
+            var resposta = window.document.getElementById('res')
+            num = Number(numero)
+            var c = 1
+
+            /*
+            while (c <= numero ) {
+                var novaLinha = document.createElement('p');
+                novaLinha.innerHTML = `Tudo bem ${c}`
+                resposta.appendChild(novaLinha);
+                c++
+            }
+            */
+
+           do{
+            var novaLinha = document.createElement('p');
+            novaLinha.innerHTML = `Tudo bem ${c}`
+            resposta.appendChild(novaLinha);
+            c++
+           } while (c <= numero )
+           
+        }
+        
+    </script>
+</body>
+</html>
