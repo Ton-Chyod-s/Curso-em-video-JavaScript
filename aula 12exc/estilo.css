@@ -1,0 +1,44 @@
+body {
+    background: rgb(167, 167, 234);
+    font: normal 12pt Arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto ;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.445);
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Ajuste a altura da div container conforme necessário */
+  }
+  
+  .bola {
+    width: 200px; /* Ajuste o tamanho da bola conforme necessário */
+    height: 200px; /* Ajuste o tamanho da bola conforme necessário */
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+.bola img {
+    max-width: 150%;
+    max-height: 200%;
+  }
