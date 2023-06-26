@@ -1,6 +1,7 @@
 body {
     background: rgb(167, 167, 234);
     font: normal 12pt Arial;
+    
 }
 
 header {
@@ -22,3 +23,8 @@ footer {
     text-align: center;
     font-style: italic;
 }
+
+.inline {
+    display: inline-block;
+    margin-right: 10px;
+  }

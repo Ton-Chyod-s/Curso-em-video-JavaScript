@@ -11,11 +11,21 @@
         <h1>Modelo para fazer os exercício </h1>
     </header>
     <section>
-        <div> 
-            <p>Ano de nascimento:</p>
-            <input type="text">
-            <p>Sexo</p>
-            <input type="check">
+        <div id="div_1">
+            <p class="inline">Ano de nascimento:</p>
+            <input type="text" rel="stylesheet" href="styles.css">
+            
+                    <p>Sexo:</p>
+                    
+                    <input type="radio" id="masc" name="genero" value="masculino">
+                    <label for="masc">Masculino</label>
+                    
+                    <input type="radio" id="fem" name="genero" value="feminino">
+                    <label for="fem">Feminino</label> 
+                    
+                
+            
+            <input type="button" value="Verificar" onclick="verificar()">
         </div>
         <div>
            Início da segunda linha ..
